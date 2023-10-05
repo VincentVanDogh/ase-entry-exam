@@ -7,6 +7,9 @@ class Coordinates(BaseModel):
     x: int
     y: int
 
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
 
 class StageTwoAnswer(BaseModel):
     accessiblePoints: List[Coordinates]
